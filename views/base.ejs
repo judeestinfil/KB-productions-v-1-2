@@ -1,0 +1,41 @@
+<%-include('header')-%>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4 offset-m4">
+            <div class="card">
+                <div class="card-action purple darken-1 white-text">
+                    <h3 class="brand-logo center">KB Productions</h3>
+                    <%if(locals.logout){%>
+                        <div class="alter-alert-success center purple lighten-2">
+                        <%=logout%>
+                        </div>
+                    <%}%>
+                </div>
+                <form action="/route/login" method="POST" class="pt-3">
+                    <div class="card-content">
+                        <div class="form-field">
+                            <label for="email">Email Address</label>
+                            <input type="email" placeholder="email" name="email">
+                        </div><br>
+                        <div class="form-field">
+                            <label for="password">Password</label>
+                            <input type="password" name="password">
+                        </div><br>
+                        <div class="form-field">
+                            <label>
+                                <input type="checkbox" />
+                                <span>Remember Me</span>
+                            </label>
+                        </div><br>
+                        <div class="form-field">
+                            <button class="btn-large waves-effect waves-dark purple" style="width:100%;" >Login</button>
+                        </div><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div></div>
+
+<%-include('footer')-%>
